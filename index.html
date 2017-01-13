@@ -1,0 +1,3006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Glassblowing as a Language of Forms</title>
+	<link href="css/bootstrap.min.311.css" media="all" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- 
+<link rel="stylesheet" type="text/css" href="css/dot_nav/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/dot_nav/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/dot_nav/component.css" />
+ -->
+	<style type="text/css">
+		html
+		{
+			overflow: hidden;
+			_overflow: auto;
+		}
+
+		html, body { height: 100%; }
+		#viewport { overflow: hidden; }
+
+		body
+		{
+			margin: 0;
+			padding: 0;
+			font-family: Verlag, Open Sans, Helvetica, Arial !important;
+		}
+		
+		li {
+			list-style-type: none;
+		}
+		
+		a {
+			color: #FCC056 !important;
+		}
+		
+		
+		
+		.glyphicon {
+			font-size: 20px;
+		}
+
+		#viewport
+		{
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+
+		.carousel, .carousel-inner, .item { height: 100%; }
+		
+		.carousel-caption {
+			padding-bottom: 20px !important;
+			padding-top: 0px;
+			left: 48%;
+			right:48%;
+		}
+		
+		.glyphClick{
+			width:	50px;
+			height: 50px;
+			padding-top: 20px;
+		}
+		
+		.item > iframe
+		{
+			max-width: none !important;
+			position: absolute;
+			/* height: 100% !important; */
+		}
+		.item > img, .item > video
+		{
+			max-width: none !important;
+			position: absolute;
+			z-index: -1;
+			/* height: 100% !important; */
+		}
+		.item {
+			background-size: cover;
+			background-position: center center;
+			overflow: hidden;
+		}
+		
+		.item > h2 {
+			position: absolute;
+			left: 2em;
+			bottom: 4.3em;
+			color: #FCC056;
+		}
+
+/* MODALS */
+	/* MODAL STYLING */
+		.modal-dialog {
+			width: calc(70% - 0px) !important;
+		}
+		.modal-header, .modal-body, .modal-footer {
+			border:none !important;
+		}
+		.modal-header > h3 {
+			margin-top: 50px !important;
+			color: #FCC056 !important;
+			font-size: 26px;
+		}
+		
+		.modal-body {
+			color: white !important;
+		}
+		
+	
+/* MODAL BACKGROUNDS */
+		#myModal0, #myModal1, #myModal2, #myModal3, #myModal4, #myModal5, #myModal6, #myModal7, #myModal8, #myModal9, #myModal10, #myModal11, #myModal12, #myModal13, #myModal14, #myModal15, #myModal16, #myModal17, #myModal18, #myModal19, #myModal20, #myModal21, #myModal22, #myModal23, #myModal24, #myModal25, #myModal26, #myModal27, #myModal28, #myModal29, #myModal30, #myModal31, #myModal32, #myModal33, #myModal34, #myModal35  {
+			background-size: cover;
+			background-position: center center;
+			overflow: hidden;
+		}	
+		
+		.close {
+			width:75px;
+			height:75px;
+			font-size:50px;
+			color: #FFF;
+			opacity: .5;
+			outline: none;
+			right:0px;
+			top:0px;
+			position: absolute;
+			z-index: 8000;
+		}
+		
+		.close:hover {
+			color: #FFF;
+			opacity: 1;
+		}
+		
+	
+		
+		
+	/* MODAL BACKGROUNDS */
+		.modal-content {
+			font-size: calc(130% - 0px);
+			letter-spacing: 0.1em;
+			margin-top: calc(18% - 0px);
+			background-color: rgba(98,98,100,.5) !important;
+		}
+		/* GATHERING BG */
+		#myModal0, #myModal6 {
+			background-image: url('img/modalBG/gathering/control.png') !important;
+		}
+		#myModal1 {
+			background-image: url('img/modalBG/gathering/gathering1.jpg') !important;
+		}
+		#myModal2 {
+			background-image: url('img/modalBG/gathering/gathering2.jpg') !important;
+		}
+		#myModal3 {
+			background-image: url('img/modalBG/gathering/gathering3.jpg') !important;
+		}
+		#myModal4 {
+			background-image: url('img/modalBG/gathering/gathering4.jpg') !important;
+		}
+		#myModal5 {
+			background-image: url('img/modalBG/gathering/gathering5.jpg') !important;
+		}
+		
+		/* MARVERING BG */
+		#myModal7, #myModal13 {
+			background-image: url('img/modalBG/gathering/control.png') !important;
+		}
+		#myModal8 {
+			background-image: url('img/modalBG/marvering/marvering1.jpg') !important;
+		}
+		#myModal9 {
+			background-image: url('img/modalBG/marvering/marvering2.jpg') !important;
+		}
+		#myModal10 {
+			background-image: url('img/modalBG/marvering/marvering3.jpg') !important;
+		}
+		#myModal11 {
+			background-image: url('img/modalBG/marvering/marvering4.jpg') !important;
+		}
+		#myModal12 {
+			background-image: url('img/modalBG/marvering/marvering3.jpg') !important;
+		}
+		
+		/* FLASHING BG */
+		#myModal14, #myModal20 {
+			background-image: url('img/modalBG/gathering/control.png') !important;
+		}
+		#myModal15 {
+			background-image: url('img/modalBG/flashing/flashing1.jpg') !important;
+		}
+		#myModal16 {
+			background-image: url('img/modalBG/flashing/flashing2.jpg') !important;
+		}
+		#myModal17 {
+			background-image: url('img/modalBG/flashing/flashing3.jpg') !important;
+		}
+		#myModal18 {
+			background-image: url('img/modalBG/flashing/flashing4.jpg') !important;
+		}
+		#myModal19 {
+			background-image: url('img/modalBG/flashing/flashing1.jpg') !important;
+		}
+		
+		/* BENCH BG */
+		#myModal21, #myModal27 {
+			background-image: url('img/modalBG/bench/bench_control.jpg') !important;
+		}
+		#myModal22 {
+			background-image: url('img/modalBG/bench/bench1.jpg') !important;
+		}
+		#myModal23 {
+			background-image: url('img/modalBG/bench/bench2.jpg') !important;
+		}
+		#myModal24 {
+			background-image: url('img/modalBG/bench/bench3.jpg') !important;
+		}
+		#myModal25 {
+			background-image: url('img/modalBG/bench/bench4.jpg') !important;
+		}
+		#myModal26 {
+			background-image: url('img/modalBG/bench/bench1.jpg') !important;
+		}
+		
+		/* PAIR BG */
+		#myModal28, #myModal35 {
+			background-image: url('img/modalBG/bench/bench_control.jpg') !important;
+		}
+		#myModal29 {
+			background-image: url('img/modalBG/bench/bench1.jpg') !important;
+		}
+		#myModal30 {
+			background-image: url('img/modalBG/pair/pair1.jpg') !important;
+		}
+		#myModal31 {
+			background-image: url('img/modalBG/pair/pair2.jpg') !important;
+		}
+		#myModal32 {
+			background-image: url('img/modalBG/pair/pair3.jpg') !important;
+		}
+		#myModal33 {
+			background-image: url('img/modalBG/pair/pair4.jpg') !important;
+		}
+		#myModal34 {
+			background-image: url('img/modalBG/pair/pair5.jpg') !important;
+		}
+		
+/* FORM ICONS ON MOVEMENT PAGES */	
+
+
+/* FORM ICONS BACKGROUND */
+	/* GATHER */
+		#g1, #g7 { 
+			background-image: url('img/formIcon/gathering/inverted/control_w.png');
+		}
+		#g2 {
+			background-image: url('img/formIcon/gathering/inverted/gathering1_w.png');
+		}
+		#g3 {
+			background-image: url('img/formIcon/gathering/inverted/gathering2_w.png');
+		}
+		#g4 {
+			background-image: url('img/formIcon/gathering/inverted/gathering3_w.png');
+		}
+		#g5 {
+			background-image: url('img/formIcon/gathering/inverted/gathering4_w.png');
+		}
+		#g6 {
+			background-image: url('img/formIcon/gathering/inverted/gathering5_w.png');
+		}
+
+	/* MARVERING */
+		#m1, #m7 { 
+			background-image: url('img/formIcon/gathering/inverted/control_w.png');
+		}
+		#m2 { 
+			background-image: url('img/formIcon/marvering/marver2_w.png');
+		}
+		#m3 { 
+			background-image: url('img/formIcon/marvering/marver3_w.png');
+		}
+		#m4 { 
+			background-image: url('img/formIcon/marvering/marver4_w.png');
+		}
+		#m5 { 
+			background-image: url('img/formIcon/marvering/marver3_w.png');
+		}
+		#m6 { 
+			background-image: url('img/formIcon/marvering/marver4_w.png');
+		}
+	
+	/* FLASHING */
+		#f1, #f7 { 
+			background-image: url('img/formIcon/gathering/inverted/control_w.png');
+		}
+		#f2 { 
+			background-image: url('img/formIcon/flashing/flash1_w.png');
+		}
+		#f3 { 
+			background-image: url('img/formIcon/flashing/flash2_w.png');
+		}
+		#f4 { 
+			background-image: url('img/formIcon/flashing/flash3_w.png');
+		}
+		#f5 { 
+			background-image: url('img/formIcon/flashing/flash2_w.png');
+		}
+		#f6 { 
+			background-image: url('img/formIcon/flashing/flash1_w.png');
+		}
+
+	/* BENCH WORK */
+		#b1, #b8 { 
+			background-image: url('img/formIcon/gathering/inverted/control_w.png');
+		}
+		#b2 { 
+			background-image: url('img/formIcon/bench/bench1_w.png');
+		}
+		#b3 { 
+			background-image: url('img/formIcon/bench/bench2_w.png');
+		}
+		#b4 { 
+			background-image: url('img/formIcon/bench/bench3_w.png');
+		}
+		#b5 { 
+			background-image: url('img/formIcon/bench/bench4_w.png');
+		}
+		#b6 { 
+			background-image: url('img/formIcon/bench/bench2_w.png');
+		}
+		#b7 {
+			background-image: url('img/formIcon/bench/bench1_w.png');	
+		}
+
+	/* PAIRED WORK */
+		#p1, #p8 { 
+			background-image: url('img/formIcon/gathering/inverted/control_w.png');
+		}
+		#p2 { 
+			background-image: url('img/formIcon/bench/bench2_w.png');
+		}
+		#p3 { 
+			background-image: url('img/formIcon/paired/paired1_w.png');
+		}
+		#p4 { 
+			background-image: url('img/formIcon/paired/paired2_w.png');
+		}
+		#p5 { 
+			background-image: url('img/formIcon/paired/paired3_w.png');
+		}
+		#p6 { 
+			background-image: url('img/formIcon/paired/paired4_w.png');
+		}
+		#p7 {
+			background-image: url('img/formIcon/paired/paired5_w.png');	
+		}
+
+/* FORM ICONS STYLING */	
+		.forms
+		{
+			position: absolute;
+			top: calc(85% - 50px);
+			margin-left: calc(50% - 435px);
+			padding: 0px;
+			width: 100%;
+			text-align: center;
+			font-size: 20px;
+			line-height: 1;
+		}
+		
+		.forms > li
+		{
+			float: left;
+			margin-right: 15px;
+			background-size: cover;
+			background-position: center center;
+			overflow: hidden;
+			width:110px;
+			height:110px;
+			list-style-type: none;
+			opacity: 0.5;
+		}
+		
+		.forms > li:hover {
+			opacity: 1.0;
+		}
+		
+		.forms > li > a
+		{	
+			width: 100%;
+			height: 100%;
+			margin: auto 0;
+			text-decoration: none;
+			color: white;
+			height: 100%;
+		}
+
+		.forms > li > a > div {
+			height:100%;
+			width:100%
+			margin: 0;
+		}
+
+		h1
+		{
+			position: absolute;
+			top: calc(50% - 50px);
+			margin: 0;
+			width: 100%;
+			text-align: center;
+			font-size: 100px;
+			line-height: 1;
+		}
+				
+		/* ScrollspyTest CSS */
+		.above {
+			position: absolute;
+			top: calc(20% - 50px);
+			width: 40%;
+			z-index: 5000;
+		}
+
+		
+
+/* 
+    ul.nav-tabs {
+	width: 140px;
+	margin-top: 20px;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+}
+ul.nav-tabs li {
+	margin: 0;
+	border-top: 1px solid #ddd;
+}
+ul.nav-tabs li:first-child {
+	border-top: none;
+}
+ul.nav-tabs li a {
+	margin: 0;
+	padding: 8px 16px;
+	border-radius: 0;
+}
+ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover {
+	color: #fff;
+	background: #0088cc;
+	border: 1px solid #0088cc;
+}
+ul.nav-tabs li:first-child a {
+	border-radius: 4px 4px 0 0;
+}
+ul.nav-tabs li:last-child a {
+	border-radius: 0 0 4px 4px;
+}
+ul.nav-tabs.affix {
+	top: 30px; /* Set the top position of pinned element }*/
+		/* END SCROLLSPYTEST CSS */
+		
+		
+	/* 	TOOL SECTION */
+		
+		#info {
+			position:absolute;
+			max-width: calc(35% - 0px);
+			padding: 30px;
+			margin: 0;
+			top: calc(55% - 0px);
+			right:0px;
+			z-index: 1000;
+			background-color: rgba(98,98,100,.5);
+		}
+		
+		#info > h4{
+			color: #FCC056;
+			font-size: 28px;
+		}
+		
+		#info > p {
+			color: white;
+			font-size: calc(160% - 0px);
+		}
+		
+		#toolHover {
+			position: relative;
+			height: 100%;
+			top: 0;
+			margin: 0 auto;
+			padding:0;
+			z-index: 4000 !important;
+		}	
+		
+		#toolHover > li {
+			float: left;
+			height: inherit;
+			min-width:calc(1% - 0px);
+			list-style-type: none;
+		}
+		
+		#toolHover > li:nth-child(1){
+			width:calc(36% - 0px);
+			height: calc(75% - 0px);
+			margin-right: calc(1.5% - 0px);
+			margin-left: calc(1.5% - 0px);
+		}
+		
+		#toolHover > li:nth-child(2){
+			width:calc(8% - 0px);
+			height: calc(95% - 0px);
+			margin-right: calc(9% - 0px);
+			
+		}
+		
+		#toolHover > li:nth-child(3){
+			width:calc(18.5% - 0px);
+			height: calc(75% - 0px);
+			margin-right: calc(.2% - 0px);
+			margin-top: calc(4% - 0px);
+		}
+		
+		#toolHover > li:nth-child(4){
+			width:calc(6% - 0px);
+			margin-right: 30px;
+		}
+		
+		#toolHover > li:nth-child(5){
+			width:calc(13% - 0px);
+			margin-right: 0px;
+		}
+		
+		.toolFocus {
+			z-index: 2000 !important;
+		}
+		
+		
+		.opacity {
+ 		   -webkit-filter: opacity(0.5);
+		   transition: filter ease-in 0.3s;
+		}
+
+		
+		
+		
+/* YT_MENU STYLE */	
+
+		@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/yt_menu/icomoon.eot');
+	src:url('fonts/yt_menu/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/yt_menu/icomoon.woff') format('woff'),
+		url('fonts/yt_menu/icomoon.ttf') format('truetype'),
+		url('fonts/yt_menu/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.dr-menu {
+	width: 100%;
+	max-width: 211px;
+	min-width: 150px;
+	position: relative;
+	font-size: 1.3em;
+	line-height: 2.5;
+	font-weight: 400;
+	color: #fff;
+	padding-top: 2em;
+	margin-left: 0.6em;
+}
+
+.dr-menu > div  {
+	cursor: pointer;
+	position: absolute;
+	width: 100%;
+	z-index: 100;
+}
+
+.dr-menu > div .dr-icon {
+	top: 0;
+	left: 0;
+	position: absolute;
+	font-size: 150%;
+	line-height: 1.6;
+	padding: 0 10px;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+.dr-menu.dr-menu-open > div .dr-icon {
+	color: #FCC056;
+	left: 100%;
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+
+.dr-menu > div .dr-icon:after {
+	content: "\e008";
+	position: absolute;
+	font-size: 50%;
+	line-height: 3.25;
+	left: -10%;
+	opacity: 0;
+}
+
+.dr-menu.dr-menu-open > div .dr-icon:after {
+	opacity: 1;
+}
+
+.dr-menu > div .dr-label {
+	padding-left: 3em;
+	position: relative;
+	display: block;
+	color: #fff;
+	font-size: 0.9em;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	line-height: 2.75;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+.dr-menu.dr-menu-open > div .dr-label {
+	color: #FCC056;
+	-webkit-transform: translateY(-90%);
+	-moz-transform: translateY(-90%);
+	-ms-transform: translateY(-90%);
+	transform: translateY(-90%);
+}
+
+.dr-menu ul {
+	padding-left: 30px;
+	margin: 0 3em 0 0;
+	list-style: none;
+	opacity: 0;
+	position: relative;
+	z-index: 0;
+	pointer-events: none;
+	-webkit-transition: opacity 0s linear 205ms;
+	-moz-transition: opacity 0s linear 205ms;
+	transition: opacity 0s linear 205ms;
+}
+
+.dr-menu.dr-menu-open ul {
+	opacity: 1;
+	z-index: 200;
+	pointer-events: auto;
+	-webkit-transition: opacity 0s linear 0s;
+	-moz-transition: opacity 0s linear 0s;
+	transition: opacity 0s linear 0s;
+}
+
+.dr-menu ul li {
+	text-decoration: none;
+	display: block;
+	margin: 0 0 5px 0;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s ease;
+	-moz-transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
+}
+
+.dr-menu.dr-menu-open ul li {
+	opacity: 1;
+}
+
+.dr-menu.dr-menu-open ul li:nth-child(2) {
+	-webkit-transition-delay: 35ms;
+	-moz-transition-delay: 35ms;
+	transition-delay: 35ms;
+}
+
+.dr-menu.dr-menu-open ul li:nth-child(3) {
+	-webkit-transition-delay: 70ms;
+	-moz-transition-delay: 70ms;
+	transition-delay: 70ms;
+}
+
+.dr-menu.dr-menu-open ul li:nth-child(4) {
+	-webkit-transition-delay: 105ms;
+	-moz-transition-delay: 105ms;
+	transition-delay: 105ms;
+}
+
+.dr-menu.dr-menu-open ul li:nth-child(5) {
+	-webkit-transition-delay: 140ms;
+	-moz-transition-delay: 140ms;
+	transition-delay: 140ms;
+}
+
+.dr-menu.dr-menu-open ul li:nth-child(6) {
+	-webkit-transition-delay: 175ms;
+	-moz-transition-delay: 175ms;
+	transition-delay: 175ms;
+}
+
+.dr-menu.dr-menu-open ul li:nth-child(7) {
+	-webkit-transition-delay: 205ms;
+	-moz-transition-delay: 205ms;
+	transition-delay: 205ms;
+}
+
+.dr-menu.dr-menu-open ul li:nth-child(8) {
+	-webkit-transition-delay: 240ms;
+	-moz-transition-delay: 240ms;
+	transition-delay: 240ms;
+}
+
+.dr-menu.dr-menu-open ul li:nth-child(9) {
+	-webkit-transition-delay: 275ms;
+	-moz-transition-delay: 275ms;
+	transition-delay: 275ms;
+}
+
+.dr-menu.dr-menu-open ul li:nth-child(10) {
+	-webkit-transition-delay: 310ms;
+	-moz-transition-delay: 310ms;
+	transition-delay: 310ms;
+}
+
+.dr-menu ul li a {
+	display: inline-block;
+	padding: 0 20px;
+	color: #fff;
+}
+
+.dr-menu ul li a:hover {
+	color: #60a773;
+}
+
+.dr-icon:before, 
+.dr-icon:after {
+	position: relative;
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.dr-menu ul .dr-icon:before {
+	margin-right: 15px;
+}
+
+.dr-icon-bullhorn:before {
+	content: "\e000";
+}
+
+.dr-icon-camera:before {
+	content: "\e002";
+}
+
+.dr-icon-heart:before {
+	content: "\e003";
+}
+
+.dr-icon-settings:before {
+	content: "\e004";
+}
+
+.dr-icon-switch:before {
+	content: "\e005";
+}
+
+.dr-icon-download:before {
+	content: "\e006";
+}
+
+.dr-icon-user:before {
+	content: "\e001";
+}
+
+.dr-icon-menu:before {
+	content: "\e007";
+}
+
+
+
+		/* ARROW DOWN STYLING */
+		.entryArrow {
+			z-index:6500;
+			-webkit-animation-duration: 2s;
+  			-webkit-animation-delay: 14s;
+ 			-webkit-animation-iteration-count: infinite;
+		}
+		
+		.interviewArrow {
+			z-index:6500;
+			-webkit-animation-duration: 2s;
+  			-webkit-animation-delay: 1s;
+ 			-webkit-animation-iteration-count: infinite;
+		}
+		
+		.trans1Arrow, .trans2Arrow {
+			z-index:6500;
+			-webkit-animation-duration: 2s;
+  			-webkit-animation-delay: 5s;
+ 			-webkit-animation-iteration-count: infinite;
+		}
+		
+		.toolsArrow, .gatherArrow, .marverArrow, .flashArrow, .benchArrow, .pairArrow {
+			z-index:6500;
+			-webkit-animation-duration: 2s;
+  			-webkit-animation-delay: 15s;
+ 			-webkit-animation-iteration-count: infinite;
+		}
+		
+		.yourElement {
+			z-index:6500;
+  			-webkit-animation-duration: 2s;
+  			-webkit-animation-delay: 14s;
+ 			-webkit-animation-iteration-count: infinite;
+		}
+		
+		.yourElementNoD {
+			z-index:6500;
+  			-webkit-animation-duration: 2s;
+  			-webkit-animation-delay: 2s;
+ 			-webkit-animation-iteration-count: infinite;
+		}
+		
+		.actVidOne {
+			z-index:6500;
+  			-webkit-animation-duration: 2s;
+  			-webkit-animation-delay: 11s;
+ 			-webkit-animation-iteration-count: infinite;
+		}
+		
+		.exitArrow {
+			z-index:6500;
+  			-webkit-animation-duration: 2s;
+  			-webkit-animation-delay: 65s;
+ 			-webkit-animation-iteration-count: infinite;
+		}
+		
+				
+		/* ACTIVATION OF TEXT ANIMATION ON CLICK FROM INTERVIEW TO TRANS1 */
+		.actTrans1 {
+			z-index:6500;
+  			-webkit-animation-duration: 2s;
+  			-webkit-animation-delay: 11s;
+ 			-webkit-animation-iteration-count: infinite;
+		}
+		#trans1Text
+		{
+			position: absolute;
+			top: calc(80% - 0px);
+			left: calc(50% - 0px);
+			width: calc(27% - 0px);
+			font-size: 2.2em;
+			font-weight: 100;
+			line-height: 1.2;
+			color: white;
+		}
+		
+		#trans2Text
+		{
+			position: absolute;
+			top: calc(28% - 0px);
+			left: calc(12% - 0px);
+			width: calc(27% - 0px);
+			font-size: 2.2em;
+			font-weight: 100;
+			line-height: 1.2;
+			color: white;
+		}
+		
+		.trans1 {
+  			-webkit-animation-duration: 1s;
+  			-webkit-animation-delay: 2s;
+ 			-webkit-animation-iteration-count: 1;
+		}
+		.trans2 {
+  			-webkit-animation-duration: 1s;
+  			-webkit-animation-delay: 2s;
+ 			-webkit-animation-iteration-count: 1;
+		}
+		
+		.actTrans2 {
+			z-index:6500;
+  			-webkit-animation-duration: 2s;
+  			-webkit-animation-delay: 11s;
+ 			-webkit-animation-iteration-count: infinite;
+		}
+		#coloText
+		{
+			position: absolute;
+			top: calc(27% - 0px);
+			left: calc(42% - 0px);
+			width: calc(38% - 0px);;
+			font-size: 1.2em;
+			font-weight: 100;
+			line-height: 1.2;
+			color: white;
+		}
+		
+		.colo {
+  			-webkit-animation-duration: 1s;
+  			-webkit-animation-delay: 2s;
+ 			-webkit-animation-iteration-count: 1;
+		}
+		
+		
+
+		
+</style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy">
+
+<nav id="dr-menu" class="dr-menu">
+    <div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><span class="dr-label">nav</span></div>
+    <ul>
+        <li><a class="dr-icon"href="#carousel-example-generic-entry">Entry</a></li>
+        <li><a class="dr-icon interVidNav"href="#carousel-example-generic-interview">Interview</a></li>
+        <li><a class="dr-icon toolNav"href="#carousel-example-generic-tools">Tools</a></li>
+        <li><a class="dr-icon gatherNav"href="#carousel-example-generic-gathering">Gathering</a></li>
+        <li><a class="dr-icon marverNav"href="#carousel-example-generic-marvering">Marvering</a></li>
+        <li><a class="dr-icon flashNav"href="#carousel-example-generic-flashing">Flashing</a></li>
+        <li><a class="dr-icon benchNav"href="#carousel-example-generic-benchWork">Bench Work</a></li>
+        <li><a class="dr-icon pairNav"href="#carousel-example-generic-pairedWork">Paired Work</a></li>
+        <li><a class="dr-icon exitVidNav"href="#carousel-example-generic-closing">Exit</a></li>
+        <li><a class="dr-icon"href="#carousel-example-generic-colophon">Colophon</a></li>
+        <li><a data-toggle="modal" class="dr-icon" href="#sources">Sources</a></li>
+    </ul>
+</nav>
+
+<!-- 
+<div class="row above">
+        <div class="col-xs-3" id="myScrollspy">
+            <ul class="nav nav-tabs nav-stacked affix-top" data-spy="affix" data-offset-top="125">
+                <li class="active"><a href="#carousel-example-generic-interview">Interview</a></li>
+                <li><a href="#carousel-example-generic-tools">Tools</a></li>
+                <li><a href="#carousel-example-generic-gathering">Gathering</a></li>
+                <li><a href="#carousel-example-generic-marvering">Marvering</a></li>
+                <li><a href="#carousel-example-generic-flashing">Flashing</a></li>
+                <li><a href="#carousel-example-generic-benchWork">Bench Work</a></li>
+                <li><a href="#carousel-example-generic-pairedWork">Paired Work</a></li>
+            </ul>
+        </div>
+        </div>
+ -->
+<!--BEGIN VIEWPORT-->
+<div id="viewport">
+<!--BEGIN CAROUSEL ONE-->
+<div id="carousel-example-generic-entry" class="carousel slide">
+  <!-- Indicators -->
+  <!-- 
+<ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+ -->
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+	<!-- BEGIN SLIDE -->
+    <div class="item active">
+      <video data-maxwidth="2560" data-maxheight="1440" autoplay>
+  			<source src="video/entry.mp4" type="video/mp4">
+  			<source src="movie.ogg" type="video/ogg">
+  			Your browser does not support the video tag.
+	  </video>
+      <!-- <img alt="image" src="img/image.jpg" data-maxwidth="2560" data-maxheight="1707" /> -->
+      <div class="carousel-caption yourElement actVidOne">
+        <a href="#carousel-example-generic-interview"><span class="glyphClick glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+    </div>
+    <!-- END SLIDE -->
+  </div>
+  <!-- 
+Controls  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+ -->
+</div>
+<!--END CAROUSEL ONE-->
+
+<!--BEGIN CAROUSEL TWO-->
+<div id="carousel-example-generic-interview" class="carousel slide">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+	<!-- BEGIN SLIDE -->
+    <div class="item active">
+     <video id="interviewVid" style="z-index: 1 !important;"data-maxwidth="2560" data-maxheight="1440" preload="auto" controls>
+  			<source src="video/glass_test_web.mp4" type="video/mp4">
+  			<source src="movie.ogg" type="video/ogg">
+  			Your browser does not support the video tag.
+	  </video>
+      <!-- <iframe data-maxwidth="1920" data-maxheight="1080" src="http://player.vimeo.com/video/84714710" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+      <!-- <img alt="image" src="img/interview.jpg" data-maxwidth="2560" data-maxheight="1440" /> -->
+      <div class="carousel-caption interviewArrow actTrans1">
+        <a href="#carousel-example-generic-trans1"><span class="glyphClick glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+    </div>
+    <!-- END SLIDE -->
+  </div>
+</div>
+<!--END CAROUSEL TWO-->
+
+<!--BEGIN CAROUSEL THREE-->
+<div id="carousel-example-generic-trans1" class="carousel slide">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+	<!-- BEGIN SLIDE -->
+    <div class="item active">
+     <p class="trans1" id="trans1Text">The uses are endless and depend on how I feel at the moment I grab it.</p>
+      <img alt="image" src="img/trans1.jpg" data-maxwidth="2560" data-maxheight="1440" />
+      <div class="carousel-caption trans1Arrow">
+        <a href="#carousel-example-generic-tools"><span class="glyphClick glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+    </div>
+    <!-- END SLIDE -->
+  </div>
+  <!-- 
+Controls  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+ -->
+</div>
+<!--END CAROUSEL THREE-->
+
+<!--BEGIN CAROUSEL FOUR-->
+<div id="carousel-example-generic-tools" class="carousel slide">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+	<!-- BEGIN SLIDE -->
+    <div id="tool_bg"class="item active">
+    <h2>Tools</h2>
+      <ul id="toolHover">
+      	<li id="toolA"></li>
+      	<li id="toolB"></li>
+      	<li id="toolC"></li>
+      	<li id="toolD"></li>
+      	<li id="toolE"></li>
+      </ul>
+      <div id="info">
+      	<h4></h4>
+      	<p></p>
+      </div>
+      <img id="tool5" alt="image" src="img/tools/tools_jacks.png" data-maxwidth="2560" data-maxheight="1440" />
+      <img id="tool4" alt="image" src="img/tools/tools_taglio.png" data-maxwidth="2560" data-maxheight="1440" />
+      <img id="tool3" alt="image" src="img/tools/tools_shears.png" data-maxwidth="2560" data-maxheight="1440" />
+      <img id="tool2" alt="image" src="img/tools/tools_tweezer.png" data-maxwidth="2560" data-maxheight="1440" />
+      <img id="tool1" alt="image" src="img/tools/tools_block.png" data-maxwidth="2560" data-maxheight="1440" />
+      <img id="toolbg" src="img/tools/tools_bg.jpg" data-maxwidth="2560" data-maxheight="1440" />
+      <div class="carousel-caption toolArrow actTrans2">
+        <a id="button"href="#carousel-example-generic-trans2"><span class="glyphClick glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+    </div>
+    <!-- END SLIDE -->
+  </div>
+  <!-- 
+Controls  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+ -->
+</div>
+<!--END CAROUSEL FOUR-->
+
+<!--BEGIN CAROUSEL FIVE-->
+<div id="carousel-example-generic-trans2" class="carousel slide">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+	<!-- BEGIN SLIDE -->
+    <div class="item active">
+     <p class="trans2" id="trans2Text">What's really amazing about glassblowing is how the movements in your body determine the final outcome of the form.</p>
+      <img alt="image" src="img/trans2.jpg" data-maxwidth="2560" data-maxheight="1440" />
+      <div class="carousel-caption trans2Arrow">
+        <a href="#carousel-example-generic-gathering"><span class="glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+    </div>
+    <!-- END SLIDE -->
+  </div>
+  <!-- 
+Controls  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+ -->
+</div>
+<!--END CAROUSEL FIVE-->
+
+<!--BEGIN CAROUSEL SIX-->
+<div id="carousel-example-generic-gathering" class="carousel slide">
+  <!-- Indicators -->
+  <!-- 
+<ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+ -->
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+	<!-- BEGIN SLIDE -->
+    <div class="item active">
+    	<h2>Gathering</h2>
+      <video id="gatherVid" data-maxwidth="2560" data-maxheight="1440" preload="auto" autoplay loop>
+  			<source src="video/gatheringBig.mp4" type="video/mp4">
+  			<source src="movie.ogg" type="video/ogg">
+  			Your browser does not support the video tag.
+	  </video>
+	  <ul class="forms">
+	  	<li id="g1"><a data-toggle="modal" href="#myModal0" ><div></div></a></li>
+	  	<li	id="g2"><a data-toggle="modal" href="#myModal1" ><div></div></a></li>
+	  	<li	id="g3"><a data-toggle="modal" href="#myModal2" ><div></div></a></li>
+	  	<li	id="g4"><a data-toggle="modal" href="#myModal3" ><div></div></a></li>
+	  	<li	id="g5"><a data-toggle="modal" href="#myModal4" ><div></div></a></li>
+	  	<li	id="g6"><a data-toggle="modal" href="#myModal5" ><div></div></a></li>
+	  	<li	id="g7"><a data-toggle="modal" href="#myModal6" ><div></div></a></li>
+	  </ul>
+      <div class="carousel-caption gatherArrow">
+        <a href="#carousel-example-generic-marvering"><span class="glyphClick glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+
+    </div>
+    <!-- END SLIDE -->
+  </div>
+  <!-- 
+Controls  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+ -->
+</div>
+<!--END CAROUSEL SIX-->
+
+<!--BEGIN CAROUSEL SEVEN-->
+<div id="carousel-example-generic-marvering" class="carousel slide">
+  <!-- Indicators -->
+  <!-- 
+<ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+ -->
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+	<!-- BEGIN SLIDE -->
+    <div class="item active">
+     <h2>Marvering</h2>
+      <video data-maxwidth="2560" data-maxheight="1440" autoplay loop>
+  			<source src="video/marvering.mp4" type="video/mp4">
+  			<source src="movie.ogg" type="video/ogg">
+  			Your browser does not support the video tag.
+	  </video>
+	  <ul class="forms">
+	  	<li id="m1"><a data-toggle="modal" href="#myModal7" ><div></div></a></li>
+	  	<li	id="m2"><a data-toggle="modal" href="#myModal8" ><div></div></a></li>
+	  	<li	id="m3"><a data-toggle="modal" href="#myModal9" ><div></div></a></li>
+	  	<li	id="m4"><a data-toggle="modal" href="#myModal10" ><div></div></a></li>
+	  	<li	id="m5"><a data-toggle="modal" href="#myModal11" ><div></div></a></li>
+	  	<li	id="m6"><a data-toggle="modal" href="#myModal12" ><div></div></a></li>
+	  	<li	id="m7"><a data-toggle="modal" href="#myModal13" ><div></div></a></li>
+	  </ul>
+      <div class="carousel-caption marverArrow">
+        <a href="#carousel-example-generic-flashing"><span class="glyphClick glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+    </div>
+    <!-- END SLIDE -->
+  </div>
+  <!-- 
+Controls  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+ -->
+</div>
+<!--END CAROUSEL SEVEN-->
+
+<!--BEGIN CAROUSEL EIGHT-->
+<div id="carousel-example-generic-flashing" class="carousel slide">
+  <!-- Indicators -->
+  <!-- 
+<ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+ -->
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+	<!-- BEGIN SLIDE -->
+    <div class="item active">
+     <h2>Flashing</h2>
+      <video data-maxwidth="2560" data-maxheight="1440" autoplay loop>
+  			<source src="video/flashing.mp4" type="video/mp4">
+  			<source src="movie.ogg" type="video/ogg">
+  			Your browser does not support the video tag.
+	  </video>
+      <ul class="forms">
+	  	<li id="f1"><a data-toggle="modal" href="#myModal14" ><div></div></a></li>
+	  	<li	id="f2"><a data-toggle="modal" href="#myModal15" ><div></div></a></li>
+	  	<li	id="f3"><a data-toggle="modal" href="#myModal16" ><div></div></a></li>
+	  	<li	id="f4"><a data-toggle="modal" href="#myModal17" ><div></div></a></li>
+	  	<li	id="f5"><a data-toggle="modal" href="#myModal18" ><div></div></a></li>
+	  	<li	id="f6"><a data-toggle="modal" href="#myModal19" ><div></div></a></li>
+	  	<li	id="f7"><a data-toggle="modal" href="#myModal20" ><div></div></a></li>
+	  </ul>
+      <div class="carousel-caption flashArrow">
+        <a href="#carousel-example-generic-benchWork"><span class="glyphClick glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+    </div>
+    <!-- END SLIDE -->
+  </div>
+  <!-- 
+Controls  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+ -->
+</div>
+<!--END CAROUSEL EIGHT-->
+
+<!--BEGIN CAROUSEL NINE-->
+<div id="carousel-example-generic-benchWork" class="carousel slide">
+  <!-- Indicators -->
+  <!-- 
+<ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+ -->
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+	<!-- BEGIN SLIDE -->
+    <div class="item active">
+     <h2>Bench Work</h2>
+      <video data-maxwidth="2560" data-maxheight="1440" autoplay loop>
+  			<source src="video/benchWork_small.mp4" type="video/mp4">
+  			<source src="movie.ogg" type="video/ogg">
+  			Your browser does not support the video tag.
+	  </video>
+      <ul class="forms">
+	  	<li id="b1"><a data-toggle="modal" href="#myModal21" ><div></div></a></li>
+	  	<li	id="b2"><a data-toggle="modal" href="#myModal22" ><div></div></a></li>
+	  	<li	id="b3"><a data-toggle="modal" href="#myModal23" ><div></div></a></li>
+	  	<li	id="b4"><a data-toggle="modal" href="#myModal24" ><div></div></a></li>
+	  	<li	id="b5"><a data-toggle="modal" href="#myModal25" ><div></div></a></li>
+	  	<li	id="b6"><a data-toggle="modal" href="#myModal26" ><div></div></a></li>
+	  	<li	id="b8"><a data-toggle="modal" href="#myModal27" ><div></div></a></li>
+	  </ul>
+      <div class="carousel-caption benchArrow">
+        <a href="#carousel-example-generic-pairedWork"><span class="glyphClick glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+    </div>
+    <!-- END SLIDE -->
+  </div>
+  <!-- 
+Controls  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+ -->
+</div>
+<!--END CAROUSEL NINE-->
+
+<!--BEGIN CAROUSEL TEN-->
+<div id="carousel-example-generic-pairedWork" class="carousel slide">
+  <!-- Indicators -->
+  <!-- 
+<ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+ -->
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+	<!-- BEGIN SLIDE -->
+    <div class="item active">
+     <h2>Paired Work</h2>
+      <video data-maxwidth="2560" data-maxheight="1440" autoplay loop>
+  			<source src="video/pairedWork.mp4" type="video/mp4">
+  			<source src="movie.ogg" type="video/ogg">
+  			Your browser does not support the video tag.
+	  </video>
+      <ul class="forms">
+	  	<li id="p1"><a data-toggle="modal" href="#myModal28" ><div></div></a></li>
+	  	<li	id="p2"><a data-toggle="modal" href="#myModal29" ><div></div></a></li>
+	  	<li	id="p3"><a data-toggle="modal" href="#myModal30" ><div></div></a></li>
+	  	<li	id="p4"><a data-toggle="modal" href="#myModal31" ><div></div></a></li>
+	  	<li	id="p5"><a data-toggle="modal" href="#myModal32" ><div></div></a></li>
+	  	<li	id="p6"><a data-toggle="modal" href="#myModal33" ><div></div></a></li>
+	  	<li	id="p7"><a data-toggle="modal" href="#myModal34" ><div></div></a></li>
+	  	<li	id="p8"><a data-toggle="modal" href="#myModal35" ><div></div></a></li>
+	  </ul>
+      <div class="carousel-caption pairArrow actExit">
+        <a href="#carousel-example-generic-closing"><span class="glyphClick glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+    </div>
+    <!-- END SLIDE -->
+  </div>
+  <!-- 
+Controls  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+ -->
+</div>
+<!--END CAROUSEL TEN-->
+
+<!--BEGIN CAROUSEL ELEVEN-->
+<div id="carousel-example-generic-closing" class="carousel slide">
+  <!-- Indicators -->
+  <!-- 
+<ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+ -->
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+	<!-- BEGIN SLIDE -->
+    <div class="item active">
+      <video id="exitVid" style="z-index: 1 !important;"data-maxwidth="2560" data-maxheight="1440" preload="auto">
+  			<source src="video/exitComp_web.mp4" type="video/mp4">
+  			<source src="movie.ogg" type="video/ogg">
+  			Your browser does not support the video tag.
+	  </video>
+	  <div class="carousel-caption exitArrow exitTrigger">
+        <a href="#carousel-example-generic-colophon"><span class="glyphClick glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+    </div>
+    <!-- END SLIDE -->
+  </div>
+  <!-- 
+Controls  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+ -->
+</div>
+<!--END CAROUSEL ELEVEN-->
+
+<!--BEGIN CAROUSEL TWELVE-->
+<div id="carousel-example-generic-colophon" class="carousel slide">
+  <!-- Indicators -->
+  <!-- 
+<ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+ -->
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+	<!-- BEGIN SLIDE -->
+    <div class="item active">
+     <h2>Colophon</h2>
+     	<div id="colophon">
+     		<p class="colo" id="coloText">This project was produced in partial fulfillment of the requirements of the Senior Studio in <br>Graphic Design, School of Design, The University of the Arts, Philadelphia, PA, Spring 2014.<br><br>
+
+Instructor: Christine Hiebert, Adjunct Professor, Graphic Design, UArts<br>
+Principal Writing Faculty and Guest Critic: Susan Viguers, Professor, UArts<br>
+Professional Consultant and Guest Critic: Justin Peters, Global Executive Creative Director, Siegal+Gale, New York, NY<br>
+Research librarian: Josh Roberts, Greenfield Library, UArts<br><br>
+
+Special Advisor(s):<br>
+John Shoemaker, Artist, Glass-maker<br>
+Helen Lee, Artist, Artist, Glass-maker<br>
+Alex Rosenberg, Artist, Glass-maker<br>
+Christine Hiebert, Adjunct Professor, Graphic Design, UArts<br>
+Daniel Giudula, Adjunct Professor, Electronic Media, UArts<br><br>
+
+Concept, Design and Site Development by Buddy Harris<br>
+Video, Photos and Glyphs by Buddy Harris<br><br>
+
+<!-- 
+Dedicated to:<br>
+[fill in the blank]<br><br>
+
+Special thanks to:<br>
+ -->
+
+
+</p>
+     	</div>
+      <img alt="image" src="img/colophon.jpg" data-maxwidth="2560" data-maxheight="1440"/>
+      <!-- <img alt="image" src="img/image.jpg" data-maxwidth="2560" data-maxheight="1707" /> -->
+      <!-- 
+<div class="carousel-caption yourElement">
+        <a href="#carousel-example-generic-two"><span class="glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+ -->
+    </div>
+    <!-- END SLIDE -->
+  </div>
+</div>
+<!--END CAROUSEL TWELVE-->
+
+</div>
+<!--END VIEWPORT-->
+
+<!-- Modal Citations -->
+  <div class="modal fade" id="sources" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="backgroung-color: rgba(98,98,98,100,.8);">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/gathering/inverted/control_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Sources</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p style="font-size:16px;">Text adapted from:<br><br>
+	Burke, Ed. Glassblowing A TECHNICAL MANUAL. Ramsbury, Marlborough Wiltshire: The Crowood Press Ltd., 2005: 7, 21-31, 55-61, 71-78.<br>
+		(Section:[fill in section])<br><br>
+	Littleton, Harvey K. Glassblowing A Search for Form. NY: Van Nostrand Reinhold Company, 1971: 58, 60-83.<br>
+		(Section: Entry, Transition one)<br><br>
+	Rielly, Brian. Interview by Harris, Buddy. Hot Glass Shop, UArts, 16 Feb. 2014.<br>
+		(Section: Conceptual glyph development)<br><br>
+	Rosenberg, Alex. Interview by Harris, Buddy. Hot Glass Shop, UArts, 18 Feb. 2014.<br>
+		(Section: Conceptual glyph development)<br><br>
+	Shoemaker, John. Interview by Harris, Buddy. Hot Glass Shop, UArts, 11 Feb. 2014.<br>
+		(Section: Interview, conceptual glyph development)</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer">
+		
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+
+<!-- GATHERING -->
+<!-- Modal 0 -->
+  <div class="modal fade" id="myModal0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <ul class="forms">
+	  	<li id="g1" style="opacity: 1;"></li>
+	  	<li	id="g2"><a data-toggle="modal" href="#myModal1" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g3"><a data-toggle="modal" href="#myModal2" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g4"><a data-toggle="modal" href="#myModal3" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g5"><a data-toggle="modal" href="#myModal4" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g6"><a data-toggle="modal" href="#myModal5" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g7"><a data-toggle="modal" href="#myModal6" data-dismiss="modal" ><div></div></a></li>
+	  </ul>    
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" >&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/gathering/inverted/control_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Gathering: Control Stance</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>Gathering is the name that glass-makers give to the process of collecting
+molten glass from the furnace on the end of a blowing pipe or punty. To start almost any process within the studio the Gaffer stands straight with his shoulders square and the pipe level.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer">
+		
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+ <!-- Modal 1 -->
+  <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="g1" style="opacity:1;"><a data-toggle="modal" href="#myModal0" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g2" style="opacity:1;"></li>
+	  	<li	id="g3"><a data-toggle="modal" href="#myModal2" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g4"><a data-toggle="modal" href="#myModal3" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g5"><a data-toggle="modal" href="#myModal4" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g6"><a data-toggle="modal" href="#myModal5" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g7"><a data-toggle="modal" href="#myModal6" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/gathering/inverted/gathering1_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Gathering: Movement 1</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>To prepare the pipe, the Gaffer rests the wide end of the pipe in the warmer for a few minutes. The pipe is warm enough to use when the tip is glowing a deep cherry red colour. In order to gather some glass, he begins by resting the iron horizontally in the mouth of the furnace with about 20cm(8in) of the pipe overhanging the inside wall.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 2 -->
+  <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="g1" style="opacity:1;"><a data-toggle="modal" href="#myModal0" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g2" style="opacity:1;"><a data-toggle="modal" href="#myModal1" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g3" style="opacity:1;"></li>
+	  	<li	id="g4"><a data-toggle="modal" href="#myModal3" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g5"><a data-toggle="modal" href="#myModal4" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g6"><a data-toggle="modal" href="#myModal5" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g7"><a data-toggle="modal" href="#myModal6" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/gathering/inverted/gathering2_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Gathering: Movement 2</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>The Gaffer moves the pipe over to the right-hand side of the gathering hole and gently raises the back of the pipe with his right hand while looking at the tip of
+the blowpipe inside the furnace. He keeps raising the back of the pipe until he can
+see a reflection of the tip in the molten glass; this reflection allows him to judge
+where the surface of the glass is. He pushes the pipe about 5cm(2in) into the glass while turning clockwise. Molten glass begins to collect on the tip of the pipe.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 3 -->
+  <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="g1" style="opacity:1;"><a data-toggle="modal" href="#myModal0" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g2" style="opacity:1;"><a data-toggle="modal" href="#myModal1" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g3" style="opacity:1;"><a data-toggle="modal" href="#myModal2" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g4" style="opacity:1;"></li>
+	  	<li	id="g5"><a data-toggle="modal" href="#myModal4" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g6"><a data-toggle="modal" href="#myModal5" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g7"><a data-toggle="modal" href="#myModal6" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/gathering/inverted/gathering3_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Gathering: Movement 3</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>Lowering the back of the pipe slightly so that the tip rises, the Gaffer uses the gathering hole as a fulcrum. He keeps turning all the time; as the pipe begins to leave the surface of the glass a glass ‘tail’ begins falling from the iron into the furnace. As the Gaffer increases the turning speed, most of the tail will twist back on to the pipe. This process will also make the tail become thinner and thinner and eventually snap.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 4 -->
+  <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <ul class="forms">
+	  	<li id="g1" style="opacity:1;"><a data-toggle="modal" href="#myModal0" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g2" style="opacity:1;"><a data-toggle="modal" href="#myModal1" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g3" style="opacity:1;"><a data-toggle="modal" href="#myModal2" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g4" style="opacity:1;"><a data-toggle="modal" href="#myModal3" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g5" style="opacity:1;"></li>
+	  	<li	id="g6"><a data-toggle="modal" href="#myModal5" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g7"><a data-toggle="modal" href="#myModal6" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/gathering/inverted/gathering4_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Gathering: Movement 4</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>The Gaffer reduces the turning speed so that it is just enough to stop the glass from falling off the iron again. When he holds the iron horizontally the gather will begin to smooth off into a neat, round ball. He moves his left hand up the pipe to about the halfway point, but before the iron gets hot, and keeps turning all the time.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 5 -->
+  <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="g1" style="opacity:1;"><a data-toggle="modal" href="#myModal0" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g2" style="opacity:1;"><a data-toggle="modal" href="#myModal1" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g3" style="opacity:1;"><a data-toggle="modal" href="#myModal2" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g4" style="opacity:1;"><a data-toggle="modal" href="#myModal3" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g5" style="opacity:1;"><a data-toggle="modal" href="#myModal4" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g6" style="opacity:1;"></li>
+	  	<li	id="g7"><a data-toggle="modal" href="#myModal6" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/gathering/inverted/gathering5_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Gathering: Movement 5</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>The Gaffer moves his left hand up the pipe to about the halfway point, but before he feels the iron get hot, and keeps turning all the time. He raises the pipe up horizontally and removes it from the furnace.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 6 -->
+  <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="g1" style="opacity:1;"><a data-toggle="modal" href="#myModal0" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g2" style="opacity:1;"><a data-toggle="modal" href="#myModal1" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g3" style="opacity:1;"><a data-toggle="modal" href="#myModal2" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g4" style="opacity:1;"><a data-toggle="modal" href="#myModal3" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g5" style="opacity:1;"><a data-toggle="modal" href="#myModal4" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g6" style="opacity:1;"><a data-toggle="modal" href="#myModal5" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="g7" style="opacity:1;"></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/gathering/inverted/control_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Gathering: Control Stance</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>The Gaffer completes the gathering form by returning to the Control Stance, standing straight, shoulders square, and the pipe level. When he is standing or walking with hot glass on a blowing pipe or a punty, he always holds the pipe with the hot glass ahead of his left hand; his left hand will be somewhere near the center of the pipe and his right hand should hold the pipe at the mouthpiece end.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- MARVERING -->
+<!-- Modal 7 -->
+  <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="m1" style="opacity:1;"></li>
+	  	<li	id="m2"><a data-toggle="modal" href="#myModal8" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m3"><a data-toggle="modal" href="#myModal9" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m4"><a data-toggle="modal" href="#myModal10" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m5"><a data-toggle="modal" href="#myModal11" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m6"><a data-toggle="modal" href="#myModal12" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m7"><a data-toggle="modal" href="#myModal13" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/gathering/inverted/control_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Marvering: Control Stance</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>Marvering is the name that glass-makers give to the process of rolling and shaping molten glass on a hard, flat surface of stone, wood, or metal called a Marver. To start almost any process within the studio the Gaffer stands straight with his shoulders square and the pipe level.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 8 -->
+  <div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="m1" style="opacity:1;"><a data-toggle="modal" href="#myModal7" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m2" style="opacity:1;"></li>
+	  	<li	id="m3"><a data-toggle="modal" href="#myModal9" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m4"><a data-toggle="modal" href="#myModal10" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m5"><a data-toggle="modal" href="#myModal11" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m6"><a data-toggle="modal" href="#myModal12" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m7"><a data-toggle="modal" href="#myModal13" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/marvering/marver2_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Marvering: Movement 1</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>The Gaffer moves from the control stance holding the pipe in a downward angle. This allows the gathered glass to fall forward just as the glass-maker continues to the next movement.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 9 -->
+  <div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="m1" style="opacity:1;"><a data-toggle="modal" href="#myModal7" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m2" style="opacity:1;"><a data-toggle="modal" href="#myModal8" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m3" style="opacity:1;"></li>
+	  	<li	id="m4"><a data-toggle="modal" href="#myModal10" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m5"><a data-toggle="modal" href="#myModal11" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m6"><a data-toggle="modal" href="#myModal12" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m7"><a data-toggle="modal" href="#myModal13" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/marvering/marver3_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Marvering: Movement 2</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>The glass-maker approaches the marver with the back end of the pipe lower than the height of the marver’s top surface.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 10 -->
+  <div class="modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="m1" style="opacity:1;"><a data-toggle="modal" href="#myModal7" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m2" style="opacity:1;"><a data-toggle="modal" href="#myModal8" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m3" style="opacity:1;"><a data-toggle="modal" href="#myModal9" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m4" style="opacity:1;"></li>
+	  	<li	id="m5"><a data-toggle="modal" href="#myModal11" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m6"><a data-toggle="modal" href="#myModal12" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m7"><a data-toggle="modal" href="#myModal13" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/marvering/marver4_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Marvering: Movement 3</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>The Gaffer turns the pipe in his fingers and keeps it turning as he makes contact with the marver. As he establishes the rolling motion on the marver, the Gaffer uses the palms and fingers of his hands to roll the pipe – left palm facing down, right palm facing up. Bringing the angle of the pipe up so that it is horizontal and parallel with the floor. Keep rolling all the time.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 11 -->
+  <div class="modal fade" id="myModal11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="m1" style="opacity:1;"><a data-toggle="modal" href="#myModal7" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m2" style="opacity:1;"><a data-toggle="modal" href="#myModal8" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m3" style="opacity:1;"><a data-toggle="modal" href="#myModal9" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m4" style="opacity:1;"><a data-toggle="modal" href="#myModal10" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m5" style="opacity:1;"></li>
+	  	<li	id="m6"><a data-toggle="modal" href="#myModal12" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m7"><a data-toggle="modal" href="#myModal13" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/marvering/marver3_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Marvering: Movement 2 (Revisited)</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>The Gaffer lifts the glass off as he rolls towards the end of the marver. The pipe is held in a same fashion as in Movement 2 before he approaches for another pass on the marver.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 12 -->
+  <div class="modal fade" id="myModal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="m1" style="opacity:1;"><a data-toggle="modal" href="#myModal7" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m2" style="opacity:1;"><a data-toggle="modal" href="#myModal8" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m3" style="opacity:1;"><a data-toggle="modal" href="#myModal9" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m4" style="opacity:1;"><a data-toggle="modal" href="#myModal10" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m5" style="opacity:1;"><a data-toggle="modal" href="#myModal11" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m6" style="opacity:1;"></li>
+	  	<li	id="m7"><a data-toggle="modal" href="#myModal13" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/marvering/marver4_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Marvering: Movement 3 (Revisited)</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>The Gaffer turns the pipe in his fingers and keeps it turning as he makes contact with the marver. The main difference in the movement from its predecessor is the pipe is not kept parallel with the floor during the rolling process. The Gaffer continues through the motion fluidly, lifting off as he reaches the end of the marver or has attained the wanted shape.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 13 -->
+  <div class="modal fade" id="myModal13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="m1" style="opacity:1;"><a data-toggle="modal" href="#myModal7" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m2" style="opacity:1;"><a data-toggle="modal" href="#myModal8" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m3" style="opacity:1;"><a data-toggle="modal" href="#myModal9" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m4" style="opacity:1;"><a data-toggle="modal" href="#myModal10" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m5" style="opacity:1;"><a data-toggle="modal" href="#myModal11" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m6" style="opacity:1;"><a data-toggle="modal" href="#myModal12" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="m7" style="opacity:1;"></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/gathering/inverted/control_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Marvering: Control Stance</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>The Gaffer completes the Marvering form by returning to the Control Stance, standing straight, shoulders square, and with the pipe level.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+
+<!-- FLASHING -->
+<!-- Modal 14 -->
+  <div class="modal fade" id="myModal14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="f1" style="opacity:1;"></li>
+	  	<li	id="f2"><a data-toggle="modal" href="#myModal15" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f3"><a data-toggle="modal" href="#myModal16" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f4"><a data-toggle="modal" href="#myModal17" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f5"><a data-toggle="modal" href="#myModal18" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f6"><a data-toggle="modal" href="#myModal19" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f7"><a data-toggle="modal" href="#myModal20" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/gathering/inverted/control_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Flashing: Control Stance</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>Flashing is the name that glass-makers give to the process of reheating glass once it has begun to cool, in order to manipulate it. This process is started in the same fashion as the other forms, in the Control Stance, usually as a continuation from one movement to another.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 15 -->
+  <div class="modal fade" id="myModal15" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="f1" style="opacity:1;"><a data-toggle="modal" href="#myModal14" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f2" style="opacity:1;"></li>
+	  	<li	id="f3"><a data-toggle="modal" href="#myModal16" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f4"><a data-toggle="modal" href="#myModal17" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f5"><a data-toggle="modal" href="#myModal18" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f6"><a data-toggle="modal" href="#myModal19" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f7"><a data-toggle="modal" href="#myModal20" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/flashing/flash1_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Flashing: Movement 1</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>The Gaffer makes a swift controlled move from his standing or sitting position towards the gloryhole. A turn of the body and the pipe from its perpendicular orientation to one parallel is made before the glass goes into the gloryhole.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 16 -->
+  <div class="modal fade" id="myModal16" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="f1" style="opacity:1;"><a data-toggle="modal" href="#myModal14" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f2" style="opacity:1;"><a data-toggle="modal" href="#myModal15" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f3" style="opacity:1;"></li>
+	  	<li	id="f4"><a data-toggle="modal" href="#myModal17" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f5"><a data-toggle="modal" href="#myModal18" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f6"><a data-toggle="modal" href="#myModal19" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f7"><a data-toggle="modal" href="#myModal20" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/flashing/flash2_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Flashing: Movement 2</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>The Gaffer leans forward to guide the glass and pipe into the opening of the gloryhole. The pipe is kept level as the Gaffer swiftly plunges the glass into the center of the heat.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 17 -->
+  <div class="modal fade" id="myModal17" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="f1" style="opacity:1;"><a data-toggle="modal" href="#myModal14" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f2" style="opacity:1;"><a data-toggle="modal" href="#myModal15" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f3" style="opacity:1;"><a data-toggle="modal" href="#myModal16" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f4" style="opacity:1;"></li>
+	  	<li	id="f5"><a data-toggle="modal" href="#myModal18" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f6"><a data-toggle="modal" href="#myModal19" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f7"><a data-toggle="modal" href="#myModal20" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/flashing/flash3_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Flashing: Movement 3</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>This is probably the most controlled movement in the flashing form. The Gaffer, while turning constantly, has to keep the glass centered on the pipe while the glass heats up and becomes workable. If the Gaffer spins the pipe too fast or too slow the glass will either spin out or collapse on itself.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 18 -->
+  <div class="modal fade" id="myModal18" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="f1" style="opacity:1;"><a data-toggle="modal" href="#myModal14" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f2" style="opacity:1;"><a data-toggle="modal" href="#myModal15" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f3" style="opacity:1;"><a data-toggle="modal" href="#myModal16" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f4" style="opacity:1;"><a data-toggle="modal" href="#myModal17" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f5" style="opacity:1;"></li>
+	  	<li	id="f6"><a data-toggle="modal" href="#myModal19" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f7"><a data-toggle="modal" href="#myModal20" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/flashing/flash2_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Flashing: Movement 2 (Reversed)</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>The Gaffer carefully and swiftly pulls the pipe back toward him leaning forward to maintain support of the pipe, making sure the glass is removed cleanly from the gloryhole.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 19 -->
+  <div class="modal fade" id="myModal19" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="f1" style="opacity:1;"><a data-toggle="modal" href="#myModal14" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f2" style="opacity:1;"><a data-toggle="modal" href="#myModal15" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f3" style="opacity:1;"><a data-toggle="modal" href="#myModal16" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f4" style="opacity:1;"><a data-toggle="modal" href="#myModal17" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f5" style="opacity:1;"><a data-toggle="modal" href="#myModal18" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f6" style="opacity:1;"></li>
+	  	<li	id="f7"><a data-toggle="modal" href="#myModal20" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/flashing/flash1_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Flashing: Movement 1 (Reversed)</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>The Gaffer, in a controlled manner, moves back from the standing position in front of the gloryhole in preparation to work the glass at the bench.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 20 -->
+  <div class="modal fade" id="myModal20" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="f1" style="opacity:1;"><a data-toggle="modal" href="#myModal14" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f2" style="opacity:1;"><a data-toggle="modal" href="#myModal15" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f3" style="opacity:1;"><a data-toggle="modal" href="#myModal16" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f4" style="opacity:1;"><a data-toggle="modal" href="#myModal17" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f5" style="opacity:1;"><a data-toggle="modal" href="#myModal18" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f6" style="opacity:1;"><a data-toggle="modal" href="#myModal19" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="f7" style="opacity:1;"></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/gathering/inverted/control_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Flashing: Control Stance</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>The Flashing process is finished much in the same manner it began in the Control Stance, continuing from one movement to another.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+
+<!-- BENCH WORK -->
+<!-- Modal 21 -->
+  <div class="modal fade" id="myModal21" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="b1" style="opacity:1;"></li>
+	  	<li	id="b2"><a data-toggle="modal" href="#myModal22" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b3"><a data-toggle="modal" href="#myModal23" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b4"><a data-toggle="modal" href="#myModal24" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b5"><a data-toggle="modal" href="#myModal25" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b6"><a data-toggle="modal" href="#myModal26" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b7"><a data-toggle="modal" href="#myModal27" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/gathering/inverted/control_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Bench Work: Control Stance</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>Bench work is primarily comprised of the Gaffer sitting at a bench, with parallel rails, that the pipe is rolled on in order to keep the glass on center. A smooth, fluid movement when rolling with the left hand provides a constant basis for the right hand to work on the glass. The Gaffer approaches the bench from the Control Stance as seen in previous forms.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 22 -->
+  <div class="modal fade" id="myModal22" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="b1" style="opacity:1;"><a data-toggle="modal" href="#myModal21" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b2" style="opacity:1;"></li>
+	  	<li	id="b3"><a data-toggle="modal" href="#myModal23" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b4"><a data-toggle="modal" href="#myModal24" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b5"><a data-toggle="modal" href="#myModal25" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b6"><a data-toggle="modal" href="#myModal26" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b7"><a data-toggle="modal" href="#myModal27" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/bench/bench1_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Bench Work: Movement 1</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>In a gate-like manner the Gaffer rests the pipe on the edge of the bench or just above it and swings the end of the pipe opposite the glass towards him. The Gaffer moves his body around the pipe while pivoting the pipe in a manner that resembles opening a gate. This allows him to step into the bench while still keeping an eye on the glass.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 23 -->
+  <div class="modal fade" id="myModal23" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="b1" style="opacity:1;"><a data-toggle="modal" href="#myModal21" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b2" style="opacity:1;"><a data-toggle="modal" href="#myModal22" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b3" style="opacity:1;"></li>
+	  	<li	id="b4"><a data-toggle="modal" href="#myModal24" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b5"><a data-toggle="modal" href="#myModal25" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b6"><a data-toggle="modal" href="#myModal26" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b7"><a data-toggle="modal" href="#myModal27" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/bench/bench2_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Bench Work: Movement 2</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>Just prior to sitting down the Gaffer uses the momentum from the previous gate-like movement to position the glass just over the edge of the rail. In one continuous movement the Gaffer levels the pipe back out on the rails and sits with his hip butted up against the far right side of the bench. This puts him in prime position to be overtop of the glass as well as have easy access to his tools.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 24 -->
+  <div class="modal fade" id="myModal24" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="b1" style="opacity:1;"><a data-toggle="modal" href="#myModal21" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b2" style="opacity:1;"><a data-toggle="modal" href="#myModal22" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b3" style="opacity:1;"><a data-toggle="modal" href="#myModal23" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b4" style="opacity:1;"></li>
+	  	<li	id="b5"><a data-toggle="modal" href="#myModal25" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b6"><a data-toggle="modal" href="#myModal26" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b7"><a data-toggle="modal" href="#myModal27" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/bench/bench3_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Bench Work: Movement 3</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>Now seated at the bench, the Gaffer leans over the rail in order to place his sight directly in line with the rolling glass. In that same motion the Gaffer grabs the tool that best fits the needs of that particular moment in the process. </p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 25 -->
+  <div class="modal fade" id="myModal25" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="b1" style="opacity:1;"><a data-toggle="modal" href="#myModal21" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b2" style="opacity:1;"><a data-toggle="modal" href="#myModal22" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b3" style="opacity:1;"><a data-toggle="modal" href="#myModal23" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b4" style="opacity:1;"><a data-toggle="modal" href="#myModal24" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b5" style="opacity:1;"></li>
+	  	<li	id="b6"><a data-toggle="modal" href="#myModal26" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b7"><a data-toggle="modal" href="#myModal27" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/bench/bench4_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Bench Work: Movement 4</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>Maintaining the direct line of sight over the glass and tool in hand, the Gaffer proceeds to manipulate the glass with his selected tool. An important thing to keep in mind is that the Gaffer is still constantly turning the pipe on the bench. A smooth, fluid movement when he is rolling with the left hand provides a constant basis for the right hand to work on the glass. Some Gaffers will roll the pipe from their finger tip right up their arm to the elbow, while others will walk the blowpipe with their finger tips.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 26 -->
+  <div class="modal fade" id="myModal26" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="b1" style="opacity:1;"><a data-toggle="modal" href="#myModal21" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b2" style="opacity:1;"><a data-toggle="modal" href="#myModal22" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b3" style="opacity:1;"><a data-toggle="modal" href="#myModal23" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b4" style="opacity:1;"><a data-toggle="modal" href="#myModal24" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b5" style="opacity:1;"><a data-toggle="modal" href="#myModal25" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b6" style="opacity:1;"></li>
+	  	<li	id="b7"><a data-toggle="modal" href="#myModal27" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/bench/bench2_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Bench Work: Movement 2 (Revisited)</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>Once the Gaffer has finished making the manipulations needed or the glass has become too cool to work, the Gaffer begins to straighten out his posture and maneuver the pipe in such a way that begins the gate-like movement to exit the bench.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 27 -->
+  <div class="modal fade" id="myModal27" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="b1" style="opacity:1;"><a data-toggle="modal" href="#myModal21" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b2" style="opacity:1;"><a data-toggle="modal" href="#myModal22" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b3" style="opacity:1;"><a data-toggle="modal" href="#myModal23" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b4" style="opacity:1;"><a data-toggle="modal" href="#myModal24" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b5" style="opacity:1;"><a data-toggle="modal" href="#myModal25" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b6" style="opacity:1;"><a data-toggle="modal" href="#myModal26" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="b7" style="opacity:1;"></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/gathering/inverted/control_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Bench Work: Control Stance</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>After exiting the bench the Gaffer moves into the familiar Control Stance, holding the pipe level with his shoulders square.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+
+<!-- PAIRED WORK -->
+<!-- Modal 28 -->
+  <div class="modal fade" id="myModal28" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="p1" style="opacity:1;"></li>
+	  	<li	id="p2"><a data-toggle="modal" href="#myModal29" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p3"><a data-toggle="modal" href="#myModal30" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p4"><a data-toggle="modal" href="#myModal31" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p5"><a data-toggle="modal" href="#myModal32" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p6"><a data-toggle="modal" href="#myModal33" data-dismiss="modal" ><div></div></a></l>
+	  	<li	id="p7"><a data-toggle="modal" href="#myModal34" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p8"><a data-toggle="modal" href="#myModal35" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/gathering/inverted/control_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Paired Work: Control Stance</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>Paired Work is the only form that has the ability to not start with the Gaffer in the Control Stance. When working with a assistant the person whom takes the Control Stance may be the assistant and not the Gaffer. In most cases though the Gaffer starts in this position prior to continuing to paired forms.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 29 -->
+  <div class="modal fade" id="myModal29" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="p1" style="opacity:1;"><a data-toggle="modal" href="#myModal28" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p2" style="opacity:1;"></li>
+	  	<li	id="p3"><a data-toggle="modal" href="#myModal30" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p4"><a data-toggle="modal" href="#myModal31" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p5"><a data-toggle="modal" href="#myModal32" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p6"><a data-toggle="modal" href="#myModal33" data-dismiss="modal" ><div></div></a></l>
+	  	<li	id="p7"><a data-toggle="modal" href="#myModal34" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p8"><a data-toggle="modal" href="#myModal35" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/bench/bench2_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Paired Work: Movement 1</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>This is a borrowed Bench Form movement in order to complete the Paired Work. Just prior to sitting down the Gaffer uses the momentum from the previous gate-like movement to position the glass just over the edge of the rail. In one continuous movement the Gaffer levels the pipe back out on the rails and sits with his hip butted up against the far right side of the bench. This puts him in prime position to be overtop of the glass as well as have easy access to his tools.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 30 -->
+  <div class="modal fade" id="myModal30" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="p1" style="opacity:1;"><a data-toggle="modal" href="#myModal28" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p2" style="opacity:1;"><a data-toggle="modal" href="#myModal29" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p3" style="opacity:1;"></li>
+	  	<li	id="p4"><a data-toggle="modal" href="#myModal31" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p5"><a data-toggle="modal" href="#myModal32" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p6"><a data-toggle="modal" href="#myModal33" data-dismiss="modal" ><div></div></a></l>
+	  	<li	id="p7"><a data-toggle="modal" href="#myModal34" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p8"><a data-toggle="modal" href="#myModal35" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/paired/paired1_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Paired Work: Movement 2</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>This is a borrowed Bench Form movement in order to complete the Paired Work. Now seated at the bench, the Gaffer leans over the rail in order to place his sight directly in line with the rolling glass. In that same motion the Gaffer grabs the tool that best fits the needs of that particular moment in the process.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 31 -->
+  <div class="modal fade" id="myModal31" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="p1" style="opacity:1;"><a data-toggle="modal" href="#myModal28" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p2" style="opacity:1;"><a data-toggle="modal" href="#myModal29" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p3" style="opacity:1;"><a data-toggle="modal" href="#myModal30" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p4" style="opacity:1;"></li>
+	  	<li	id="p5"><a data-toggle="modal" href="#myModal32" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p6"><a data-toggle="modal" href="#myModal33" data-dismiss="modal" ><div></div></a></l>
+	  	<li	id="p7"><a data-toggle="modal" href="#myModal34" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p8"><a data-toggle="modal" href="#myModal35" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/paired/paired2_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Paired Work: Movement 3</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>The Gaffer works the glass while he leans over it to get the best perspective. A new character, the assistant, is introduced. He rests on the side opposite the glass prepared to blow into the pipe on command.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 32 -->
+  <div class="modal fade" id="myModal32" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="p1" style="opacity:1;"><a data-toggle="modal" href="#myModal28" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p2" style="opacity:1;"><a data-toggle="modal" href="#myModal29" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p3" style="opacity:1;"><a data-toggle="modal" href="#myModal30" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p4" style="opacity:1;"><a data-toggle="modal" href="#myModal31" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p5" style="opacity:1;"></li>
+	  	<li	id="p6"><a data-toggle="modal" href="#myModal33" data-dismiss="modal" ><div></div></a></l>
+	  	<li	id="p7"><a data-toggle="modal" href="#myModal34" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p8"><a data-toggle="modal" href="#myModal35" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/paired/paired3_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Paired Work: Movement 4</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>While working with the glass, in order to expand the glass form, the Gaffer commands his waiting assistant to blow into the pipe. In this position the assistant may also cap the blow pipe in order to stop the glass form from collapsing.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 33 -->
+  <div class="modal fade" id="myModal33" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="p1" style="opacity:1;"><a data-toggle="modal" href="#myModal28" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p2" style="opacity:1;"><a data-toggle="modal" href="#myModal29" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p3" style="opacity:1;"><a data-toggle="modal" href="#myModal30" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p4" style="opacity:1;"><a data-toggle="modal" href="#myModal31" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p5" style="opacity:1;"><a data-toggle="modal" href="#myModal32" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p6" style="opacity:1;"></l>
+	  	<li	id="p7"><a data-toggle="modal" href="#myModal34" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p8"><a data-toggle="modal" href="#myModal35" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/paired/paired4_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Paired Work: Movement 5</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>Late in the process of making a glass form, the assistant will sometimes take on a role that the Gaffer original held. The assistant will take the Control Stance seen earlier, while the seated Gaffer prepares the glass to be transfered to another pipe.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 34 -->
+  <div class="modal fade" id="myModal34" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="p1" style="opacity:1;"><a data-toggle="modal" href="#myModal28" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p2" style="opacity:1;"><a data-toggle="modal" href="#myModal29" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p3" style="opacity:1;"><a data-toggle="modal" href="#myModal30" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p4" style="opacity:1;"><a data-toggle="modal" href="#myModal31" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p5" style="opacity:1;"><a data-toggle="modal" href="#myModal32" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p6" style="opacity:1;"><a data-toggle="modal" href="#myModal33" data-dismiss="modal" ><div></div></a></l>
+	  	<li	id="p7" style="opacity:1;"></li>
+	  	<li	id="p8"><a data-toggle="modal" href="#myModal35" data-dismiss="modal" ><div></div></a></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/paired/paired5_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Paired Work: Movement 6</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>Once the Gaffer has the glass ready for transfer the Assistant will line up parallel to the Gaffer's pipe. When the glass is at just the right temperature for transfer the Gaffer will grab on to the Assistant's pipe with their shears and guide it towards the glass form. Making sure to keep the glass centered, the Gaffer touches the Assistants glass tipped pipe to the glass form joining them. The assistants job the entire time is to hold the pipe steady and to follow the direction and movement of the Gaffer and their pipe.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- Modal 35 -->
+  <div class="modal fade" id="myModal35" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <ul class="forms">
+	  	<li id="p1" style="opacity:1;"><a data-toggle="modal" href="#myModal28" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p2" style="opacity:1;"><a data-toggle="modal" href="#myModal29" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p3" style="opacity:1;"><a data-toggle="modal" href="#myModal30" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p4" style="opacity:1;"><a data-toggle="modal" href="#myModal31" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p5" style="opacity:1;"><a data-toggle="modal" href="#myModal32" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p6" style="opacity:1;"><a data-toggle="modal" href="#myModal33" data-dismiss="modal" ><div></div></a></l>
+	  	<li	id="p7" style="opacity:1;"><a data-toggle="modal" href="#myModal34" data-dismiss="modal" ><div></div></a></li>
+	  	<li	id="p8" style="opacity:1;"></li>
+	  </ul>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <img class="col-lg-3 col-md-3 col-xs-3" src="img/formIcon/gathering/inverted/control_w.png">
+          <h3 class="col-lg-4 col-md-4 col-xs-4">Paired Work: Control Stance</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-4"></div>
+          <div class="col-lg-7 col-md-7 col-xs-7">
+          <p>After having transfered the glass to the assistant's pipe, and the assistant heats the glass, the Gaffer will take control of the pipe which holds the glass. At this point the Gaffer may choose to continue to work the glass at the bench or continue to one of the forms.</p>
+          </div>
+          <div class="col-lg-1 col-md-1 col-xs-1"></div>
+        </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js" charset="UTF-8">
+</script>
+<script src="js/bootstrap.min.311.js"></script>
+<!-- TOOL PAGE AND VIEWPORT -->
+<script>
+
+// TOOL PAGE SCRIPT
+$('#info').hide();
+$('#toolA').hover(function(){
+	$('#tool_bg > img').addClass('opacity');
+	$('#tool1').removeClass('opacity');
+    $('#info > h4').append( $( "<span>Blocks</span>" ) );
+	$('#info > p').append( $( "<span>Blocks are typically made of cherrywood or folded newspaper and are used to shape, cool and center the glass. They are used early in the process glassblowing, usually soon after the gather is made.</span>" ) );
+	$('#info').show();
+  	}, 
+  	function() {
+	$('#tool_bg > img').removeClass('opacity');
+    $( '#info > h4').find( "span:last" ).remove();
+    $( '#info > p').find( "span:last" ).remove();
+	$('#info').hide();
+	}
+);
+
+
+$('#toolB').hover(function(){
+	$('#tool_bg > img').addClass('opacity');
+	$('#tool2').removeClass('opacity');
+    $('#info > h4').append( $( "<span>Tweezers</span>" ) );
+	$('#info > p').append( $( "<span>These are used to pull, squeeze and shape hot glass; different sizes are available for different scale work.</span>" ) );
+	$('#info').show();
+  	}, 
+  	function() {
+	$('#tool_bg > img').removeClass('opacity');
+    $( '#info > h4').find( "span:last" ).remove();
+    $( '#info > p').find( "span:last" ).remove();
+	$('#info').hide();
+	}
+);
+
+
+$('#toolC').hover(function(){
+	$('#tool_bg > img').addClass('opacity');
+	$('#tool3').removeClass('opacity');
+    $('#info > h4').append( $( "<span>Shears</span>" ) );
+	$('#info > p').append( $( "<span>Shears are typically made with two blade surfaces; the outermost is rounded and used to hold a pipe. The inner surface is sharp and designed to cut the glass to a point. Diamond shears are used when dropping a solid foot onto a vessel, pulling the end of a bubble to stretch it out, or cutting the glass to a point, or to a seam.</span>" ) );
+	$('#info').show();
+  	}, 
+  	function() {
+	$('#tool_bg > img').removeClass('opacity');
+    $( '#info > h4').find( "span:last" ).remove();
+    $( '#info > p').find( "span:last" ).remove();
+	$('#info').hide();
+	}
+);
+
+
+$('#toolD').hover(function(){
+	$('#tool_bg > img').addClass('opacity');
+	$('#tool4').removeClass('opacity');
+    $('#info > h4').append( $( "<span>Copa</span>" ) );
+	$('#info > p').append( $( "<span>These are often a source of more questions than answers. They will make an ordinary wrap into a perfect half-round. The diameter and perfection will vary with the size of the wrap and the person using the tool.</span>" ) );
+	$('#info').show();
+  	}, 
+  	function() {
+	$('#tool_bg > img').removeClass('opacity');
+    $( '#info > h4').find( "span:last" ).remove();
+    $( '#info > p').find( "span:last" ).remove();
+	$('#info').hide();
+	}
+);
+
+
+$('#toolE').hover(function(){
+	$('#tool_bg > img').addClass('opacity');
+	$('#tool5').removeClass('opacity');
+    $('#info > h4').append( $( "<span>Jacks</span>" ) );
+	$('#info > p').append( $( "<span>Known in Italian as pucella, are the most versatile tool in glassblowing. They are used for shaping the glass, selectively cooling the glass and putting creases (jack-lines or neck-lines) in the neck of vessels where they are to break for transfer. Jacks are made in a variety of sizes and with different blade profiles for different types of work.</span>" ) );
+	$('#info').show();
+  	}, 
+  	function() {
+	$('#tool_bg > img').removeClass('opacity');
+    $( '#info > h4').find( "span:last" ).remove();
+    $( '#info > p').find( "span:last" ).remove();
+	$('#info').hide();
+	}
+);
+// TOOL PAGE SCRIPT END
+
+
+
+$('.yourElement').addClass('animated fadeInDown');
+$('.yourElementNoD').addClass('animated fadeInDown');
+
+//ANIMATE ARROWS PER PAGE
+$('.interviewArrow').click(function(){
+	$('.trans1Arrow').addClass('animated fadeInDown');
+});
+
+$('.toolNav').click(function(){
+	$('.toolArrow').addClass('animated fadeInDown');
+});
+$('.trans1Arrow').click(function(){
+	$('.toolArrow').addClass('animated fadeInDown');
+});
+
+$('.toolArrow').click(function(){
+	$('.trans2Arrow').addClass('animated fadeInDown');
+});
+
+$('.gatherNav').click(function(){
+	$('.gatherArrow').addClass('animated fadeInDown');
+});
+$('.trans2Arrow').click(function(){
+	$('.gatherArrow').addClass('animated fadeInDown');
+});
+
+$('.marverNav').click(function(){
+	$('.marverArrow').addClass('animated fadeInDown');
+});
+$('.gatherArrow').click(function(){
+	$('.marverArrow').addClass('animated fadeInDown');
+});
+
+$('.flashNav').click(function(){
+	$('.flashArrow').addClass('animated fadeInDown');
+});
+$('.marverArrow').click(function(){
+	$('.flashArrow').addClass('animated fadeInDown');
+});
+
+$('.benchNav').click(function(){
+	$('.benchArrow').addClass('animated fadeInDown');
+});
+$('.flashArrow').click(function(){
+	$('.benchArrow').addClass('animated fadeInDown');
+});
+
+$('.pairNav').click(function(){
+	$('.pairArrow').addClass('animated fadeInDown');
+});
+$('.benchArrow').click(function(){
+	$('.pairArrow').addClass('animated fadeInDown');
+});
+
+$('.exitVidNav').click(function(){
+	$('.exitArrow').addClass('animated fadeInDown');
+});
+$('.pairArrow').click(function(){
+	$('.exitArrow').addClass('animated fadeInDown');
+});
+
+
+
+
+// VIDEO PLAY ON CLICK
+$('.actVidOne').click(function(){
+	$('#interviewVid').get(0).play();
+});
+$('.interVidNav').click(function(){
+	$('#interviewVid').get(0).play();
+});
+
+$('.exitVidNav').click(function(){
+	$('#exitVid').get(0).play();	
+});
+$('.actExit').click(function(){
+	$('#exitVid').get(0).play();
+});
+
+//Act text animation on click Inter - trans1
+$('.actTrans1').click(function(){
+	$('.trans1').addClass('animated fadeInDown');
+	$('#interviewVid').get(0).pause();
+});
+
+$('.actTrans2').click(function(){
+	$('.trans2').addClass('animated fadeInUp');
+});
+
+
+//EVENT TRIGGER ON VIDEO END
+
+
+// WINDOW RESIZE
+function resizer() {
+	//selec all images, iframes and videos inside of a slide and cycle through them
+	//review each method in jQuery API if this is not clear
+	$('img, video, iframe', '.item').each(function (i, elem) {
+		var myImg = $(elem),
+			myData = myImg.data(),
+			parentWidth = $('#viewport').width(),
+			parentHeight = $('#viewport').height(),
+			//calculate actual ratio of image's width to height
+			myRatio = myData.maxwidth / myData.maxheight,
+			myWidth = parentHeight * myRatio,
+			myHeight = myWidth/ myRatio;
+		//if calculated width is small than viewport make it equal to viewport
+		if( myWidth < parentWidth){
+			myWidth = parentWidth;
+		}
+		//calc image height based on native image ratio
+		myHeight = myWidth / myRatio;
+		myImg.width(myWidth + 'px');
+		myImg.height( myHeight + 'px');
+		//center image within slide
+		myImg.css('top', ((parentHeight - myHeight) / 2) + 'px');
+		myImg.css('left', ((parentWidth - myWidth) / 2) + 'px');
+	});
+}
+
+function init() {
+	$(window).on('resize', function () {
+		resizer();
+	});
+	resizer();
+}
+
+$(document).ready(function () {
+	init();
+});
+//  GUIDULA HASH POSITION ON PAGE
+// function showPhotos(nav, photo) {
+// 	$(nav).addClass('active');
+// }
+// 
+// function processHash(myHash) {
+// 	if (myHash === '') {
+// 		$('[href="#photo1"]').click();
+// 	} else {
+// 		$('[href="' + myHash + '"]').click();
+// 	}
+// }
+// 
+// $('nav a').click(function(event){
+// 	var myNav, myPhoto;
+// 	myNav= event.currentTarget;
+// 	myPhoto = $(myNav).attr('href').replace('#', '.');
+// 	showPhotos(myNav, myPhoto);
+// });
+// 
+// processHash(location.hash);
+
+</script>
+<!-- NAV MENU -->
+<script>
+var YTMenu = (function() {
+ 
+    function init() {
+         
+        [].slice.call( document.querySelectorAll( '.dr-menu' ) ).forEach( function( el, i ) {
+ 
+            var trigger = el.querySelector( 'div.dr-trigger' ),
+                icon = trigger.querySelector( 'span.dr-icon-menu' ),
+                open = false;
+ 
+            trigger.addEventListener( 'click', function( event ) {
+                if( !open ) {
+                    el.className += ' dr-menu-open';
+                    open = true;
+                }
+            }, false );
+ 
+            icon.addEventListener( 'click', function( event ) {
+                if( open ) {
+                    event.stopPropagation();
+                    open = false;
+                    el.className = el.className.replace(/\bdr-menu-open\b/,'');
+                    return false;
+                }
+            }, false );
+ 
+        } );
+ 
+    }
+ 
+    init();
+ 
+})();
+$('#dr-menu > ul > li > a').click(function(){
+	$('#dr-menu').removeClass('dr-menu-open');
+});
+$('.dr-trigger').click(function(){
+	$('#dr-menu').addClass('dr-menu-open');
+});
+
+
+</script>
+
+<!-- VIDEOS ONLY PLAY WHEN IN VIEWPORT -->
+<script>
+
+
+// INTERVIEW VIDEO
+var interVideo = document.getElementById("interviewVid");
+
+function toggleControls() {
+  if (interVideo.hasAttribute("controls")) {
+     interVideo.removeAttribute("controls")   
+  } else {
+     interVideo.setAttribute("controls","controls")   
+  }
+}
+$('#controlTog1').hover(function(){
+	toggleControls();
+});
+
+// EXIT VIDEO
+var exitVideo = document.getElementById("exitVid");
+
+function toggleControls2() {
+  if (exitVideo.hasAttribute("controls")) {
+     exitVideo.removeAttribute("controls")   
+  } else {
+     exitVideo.setAttribute("controls","controls")   
+  }
+}
+$('#controlTog2').hover(function(){
+	toggleControls2();
+});
+</script>
+</body>
+</html>
